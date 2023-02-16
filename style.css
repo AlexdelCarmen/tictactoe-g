@@ -4,11 +4,30 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-size: 16px;
   font-family: Arial, sans-serif;
 }
 
+body {
+  background-image: url("./assets/Douglas-Fir-Staggered-Architextures.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+#winner {
+  margin-bottom: 3rem;
+  font-size: 48px;
+  background-color: #fff8ea;
+  border: 4px solid #d3756b;
+  border-radius: 30px;
+  outline: 2px solid #999;
+  padding: 1rem;
+  box-shadow: 3px 19px 8px -6px rgba(0,0,0,0.49);
+  -webkit-box-shadow: 3px 19px 8px -6px rgba(0,0,0,0.49);
+  -moz-box-shadow: 3px 19px 8px -6px rgba(0,0,0,0.49);
+}
 
 .game {
   display: flex;
@@ -19,9 +38,15 @@ html, body {
 }
 
 .game-board {
+  background-color: #fff8ea;
   display: flex;
   flex-direction: column;
-  border: 1px solid #999;
+  border: 24px solid #d3756b;
+  border-radius: 30px;
+  outline: 5px solid black;
+  box-shadow: 3px 26px 8px 21px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 3px 26px 8px 21px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 3px 26px 8px 21px rgba(0, 0, 0, 0.49);
 }
 
 .board-row {
@@ -38,4 +63,8 @@ html, body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.winner {
+  color: #A75D5D;
 }
