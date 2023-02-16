@@ -17,6 +17,7 @@ body {
 }
 
 #winner {
+  display: none;
   margin-bottom: 3rem;
   font-size: 48px;
   background-color: #fff8ea;
@@ -67,4 +68,27 @@ body {
 
 .winner {
   color: #A75D5D;
+}
+
+button {
+  display: none;
+  margin: 5rem 0;
+  padding: 1rem 3rem;
+  background-color: #fff8ea;
+  font-size: 32px;
+  border: 4px solid #d3756b;
+  border-radius: 15px;
+  outline: 2px solid #999;
+  box-shadow: 3px 19px 8px -6px rgba(0,0,0,0.49);
+  -webkit-box-shadow: 3px 19px 8px -6px rgba(0,0,0,0.49);
+  -moz-box-shadow: 3px 19px 8px -6px rgba(0,0,0,0.49);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  scale: 95%;
+  transition: all 200ms;
 }

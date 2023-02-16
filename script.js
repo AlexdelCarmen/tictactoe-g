@@ -12,6 +12,16 @@ function tictactoe() {
     [2, 4, 6],
   ];
 
+  const resetButton = document.getElementById("button");
+
+  resetButton.addEventListener("click", function () {
+    location.reload();
+  });
+
+  function displayElement(element) {
+    element.style.display = "block";
+  }
+
   let playerCells = [];
   let opponentCells = [];
 
@@ -64,12 +74,17 @@ function tictactoe() {
     addCell(Array.from(cells).indexOf(cell), playerCells);
     if (checkWinner(playerCells)) {
       banner.textContent = "PLAYER WINS";
+      displayElement(banner);
+      displayElement(resetButton);
       disableCellClickListeners();
       return;
     }
     if (checkDraw()) {
       banner.textContent = "DRAW";
+      displayElement(banner);
+      displayElement(resetButton);
       disableCellClickListeners();
+
       return;
     }
     setTimeout(handleOpponentMove, 300);
@@ -82,6 +97,8 @@ function tictactoe() {
     });
     if (emptyCells.length === 0) {
       banner.textContent = "DRAW";
+      displayElement(banner);
+      displayElement(resetButton);
       disableCellClickListeners();
       return;
     }
@@ -90,12 +107,18 @@ function tictactoe() {
     addCell(Array.from(cells).indexOf(randomCell), opponentCells);
     if (checkWinner(opponentCells)) {
       banner.textContent = "COMPUTER WINS";
+      displayElement(banner);
+      displayElement(resetButton);
       disableCellClickListeners();
+
       return;
     }
     if (checkDraw()) {
       banner.textContent = "DRAW";
+      displayElement(banner);
+      displayElement(resetButton);
       disableCellClickListeners();
+
       return;
     }
   }
